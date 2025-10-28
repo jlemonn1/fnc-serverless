@@ -5,7 +5,7 @@ import { logger } from "../../src/utils/logger.js";
 const MODEL = "stabilityai/stable-diffusion-xl-base-1.0";
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-    console.log("HF_TOKEN:", process.env.HF_TOKEN ? "✅ cargado" : "❌ no detectado");
+    console.log("HF_TOKEN:", process.env.HF_TOKEN ? "✅ cargado" + process.env.HF_TOKEN : "❌ no detectado");
 
     if (req.method !== "POST")
         return res.status(405).json({ error: "Método no permitido" });
