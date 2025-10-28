@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { hf } from "../../src/config/hf";
-import { logger } from "../../src/utils/logger";
+import { hf } from "../../src/config/hf.js";
+import { logger } from "../../src/utils/logger.js";
 
 const MODEL = "stabilityai/stable-diffusion-xl-base-1.0";
 
